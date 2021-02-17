@@ -185,6 +185,8 @@ class HtmlTocParser(HTMLParser):
             self._curr_node.inner_html += curr_tag
             return
 
+        self._html += curr_tag
+
     def handle_endtag(self, tag):
         curr_tag = "</{}>".format(tag)
 
